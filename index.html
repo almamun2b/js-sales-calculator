@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Price Calculator</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <h1>Price Calculator</h1>
+        <h3>Your Balance: $<span id="balance">12000</span></h3>
+        <div class="grid-container">
+            <section class="">
+                <form action="" class="">
+                    <input type="text" name="product" placeholder="Enter Product Name" id="product" required>
+                    <input type="number" name="price" placeholder="Enter Price" id="price" required>
+                    <input class="" id="add-to-list" type="button" value="Add To List">
+                </form>
+                <h3>Remaining Balance: $<span id="remaining-balance">12000</span></h3>
+            </section>
+
+
+            <section class="">
+                <table id="table">
+                    <tr>
+                        <th>Product Name</th>
+                        <th>Price</th>
+                    </tr>
+                    <tr>
+                        <td>Total Price</td>
+                        <td><span id="total">00</span></td>
+                    </tr>
+                </table>
+            </section>
+        </div>
+    </body>
+
+    <script src="js/app.js"></script>
+
+</html>

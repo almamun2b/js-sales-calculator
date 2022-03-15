@@ -1,0 +1,31 @@
+h1, h3{
+  text-align: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* background-color: aqua; */
+  /* row-gap: 20px; */
+  gap: 30px;
+}
+
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+table,
+td,
+th {
+  border: 1px solid;
+  padding: 12px 20px;
+  margin: 8px 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
