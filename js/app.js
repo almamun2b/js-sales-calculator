@@ -44,12 +44,26 @@ function setTotalPrice() {
     return total;
 }
 
+function isEmpty(input) {
+    
+}
+
 // add To List Button
 function addToListButton(buttonFieldId) {
     const buttonField = getElement(buttonFieldId);
+    const productField = getElement("product");
+    const priceField = getElement("price");
+
     buttonField.addEventListener('click', function () {
-        insertRows();
-        setTotalPrice();
+        
+        if (productField.value.length == 0 || priceField.value.length == 0) {
+            console.log("Input Must");
+            alert("Please Input Product & Price");
+        }
+        else {
+            insertRows();
+            setTotalPrice();
+        }
     })
 }
 
@@ -68,6 +82,8 @@ function insertRows() {
     cell1.innerHTML = product;
     cell2.innerHTML = price;
 }
+
+
 
 
 addToListButton("add-to-list");
