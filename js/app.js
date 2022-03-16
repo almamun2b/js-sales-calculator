@@ -24,6 +24,7 @@ function getPrice(priceFieldId) {
     return price;
 }
 
+// disableButton
 function disableButton() {
     const buttonField = getElement("add-to-list");
     const restBalance = parseInt(getElement('remaining-balance').innerText);
@@ -70,15 +71,7 @@ function addToListButton(buttonFieldId) {
         else {
             insertRows();
             setTotalPrice();
-            
-            const restBalance = parseInt(getElement('remaining-balance').innerText);
-            
-            if (restBalance < 0) {
-                buttonField.disabled = true;
-            }
-            else {
-                buttonField.disabled = false;
-            }
+            disableButton()
         }
     })
 }
@@ -101,5 +94,3 @@ function insertRows() {
 
 
 addToListButton("add-to-list");
-
-
