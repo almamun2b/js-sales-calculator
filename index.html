@@ -16,8 +16,8 @@
             <section class="">
                 <form class="">
                     <input type="text" name="product" placeholder="Enter Product Name" id="product" required>
-                    <input type="number" name="price" placeholder="Enter Price" id="price" required>
-                    <input class="" id="add-to-list" type="button" value="Add To List">
+                    <input type="number" name="price" placeholder="Enter Price" id="price" required onkeyup="disableButton()">
+                    <input class="" id="add-to-list" type="button" value="Add To List" >
                 </form>
                 <h3>Remaining Balance: $<span id="remaining-balance">12000</span></h3>
             </section>

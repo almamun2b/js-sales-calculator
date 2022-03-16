@@ -7,7 +7,6 @@ function getElement(elementId) {
 function getBalance(balanceFieldId) {
     const balanceField = getElement(balanceFieldId);
     const balance = parseInt(balanceField.innerText);
-    console.log(balance);
     return balance;
 }
 
@@ -15,7 +14,6 @@ function getBalance(balanceFieldId) {
 function getProduct(productFieldId) {
     const productField = getElement(productFieldId);
     const product = productField.value;
-    console.log(product);
     return product;
 }
 
@@ -23,8 +21,21 @@ function getProduct(productFieldId) {
 function getPrice(priceFieldId) {
     const priceField = getElement(priceFieldId);
     const price = parseInt(priceField.value);
-    console.log(price);
     return price;
+}
+
+function disableButton() {
+    const buttonField = getElement("add-to-list");
+    const restBalance = parseInt(getElement('remaining-balance').innerText);
+    const price = parseInt(getElement('price').value);
+    console.log(price);
+    if (restBalance < price) {
+        buttonField.disabled = true;
+    }
+    else {
+        buttonField.disabled = false;
+    }
+
 }
 
 // setTotalPrice
@@ -39,13 +50,9 @@ function setTotalPrice() {
     toralField.innerText = total;
 
     const restBalanceField = getElement('remaining-balance');
+        
     restBalanceField.innerText = balance - total;
-
     return total;
-}
-
-function isEmpty(input) {
-    
 }
 
 // add To List Button
@@ -55,7 +62,7 @@ function addToListButton(buttonFieldId) {
     const priceField = getElement("price");
 
     buttonField.addEventListener('click', function () {
-        
+
         if (productField.value.length == 0 || priceField.value.length == 0) {
             console.log("Input Must");
             alert("Please Input Product & Price");
@@ -63,6 +70,15 @@ function addToListButton(buttonFieldId) {
         else {
             insertRows();
             setTotalPrice();
+            
+            const restBalance = parseInt(getElement('remaining-balance').innerText);
+            
+            if (restBalance < 0) {
+                buttonField.disabled = true;
+            }
+            else {
+                buttonField.disabled = false;
+            }
         }
     })
 }
@@ -84,6 +100,6 @@ function insertRows() {
 }
 
 
-
-
 addToListButton("add-to-list");
+
+
