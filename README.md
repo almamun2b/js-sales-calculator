@@ -1,7 +1,7 @@
-# sell-calculator
+# sales-calculator
 
-Live Site Link [Click Here](https://mycodinglab.github.io/sell-calculator/).
-Code Link [Click Here](https://github.com/mycodinglab/sell-calculator).
+Live Site Link [Click Here](https://mycodinglab.github.io/sales-calculator/).
+Code Link [Click Here](https://github.com/mycodinglab/sales-calculator).
 
 ### Description:
 
